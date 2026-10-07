@@ -1,18 +1,18 @@
 class Workspace < Formula
   desc "Declarative native iTerm2 workspaces"
   homepage "https://github.com/Coconut924/workspace"
-  version "0.1.0"
+  version "0.2.0"
 
   depends_on :macos
 
   on_arm do
-    url "https://github.com/Coconut924/workspace/releases/download/v0.1.0/workspace-0.1.0-macos-arm64.tar.gz"
-    sha256 "3f78ed9305dbe4ba1972453f00e6215e22e3b078e998d81deb65a91731c6ac66"
+    url "https://github.com/Coconut924/workspace/releases/download/v0.2.0/workspace-0.2.0-macos-arm64.tar.gz"
+    sha256 "1ecc1ba52bed74af04383a476e13393016556d56d5f80c73716ba4d843ce0673"
   end
 
   on_intel do
-    url "https://github.com/Coconut924/workspace/releases/download/v0.1.0/workspace-0.1.0-macos-x86_64.tar.gz"
-    sha256 "4920cdd9ab62d0d2d2f4636e091639359ad46033edc431b2d9baf892e832081f"
+    url "https://github.com/Coconut924/workspace/releases/download/v0.2.0/workspace-0.2.0-macos-x86_64.tar.gz"
+    sha256 "03fe9cd45531e71b2b360fab782bc122749502fff3e50ea1ed82bf999088f13d"
   end
 
   def install
