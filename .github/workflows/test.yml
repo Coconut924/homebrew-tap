@@ -1,0 +1,30 @@
+name: Test workspace installation
+
+on:
+  push:
+    branches: [main]
+    paths: ["Formula/workspace.rb", ".github/workflows/test.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  install:
+    strategy:
+      fail-fast: false
+      matrix:
+        runner: [macos-15, macos-15-intel]
+    runs-on: ${{ matrix.runner }}
+    env:
+      HOMEBREW_NO_AUTO_UPDATE: "1"
+      HOMEBREW_NO_INSTALL_CLEANUP: "1"
+    steps:
+      - name: Install published formula
+        run: |
+          brew tap Coconut924/tap
+          brew install Coconut924/tap/workspace
+      - name: Verify installed executable
+        run: |
+          brew test Coconut924/tap/workspace
+          workspace --version

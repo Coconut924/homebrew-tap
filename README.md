@@ -41,3 +41,6 @@ verifies SHA-256 checksums. To package and publish a new workspace version,
 follow [Packaging and Homebrew releases](https://github.com/Coconut924/workspace/blob/main/docs/releases.md).
 The source repository's `mise run publish-tap` command verifies the published
 assets, updates only `Formula/workspace.rb`, and pushes that change here.
+
+GitHub Actions installs the published workspace formula and runs `brew test`
+on Apple Silicon and Intel macOS runners after formula updates.
